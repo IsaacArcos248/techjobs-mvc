@@ -27,5 +27,14 @@
         </div>
     </div>
 
+    <div th:fragment="iterateThroughJobs">
+        <table th:each="isaac, idx : ${jobPosts}" th:class="job-listing">
+            <tr th:each="jobPost : ${isaac}">
+                <td th:text="${jobPost.key}"></td>
+                <td th:text="${jobPost.value}"></td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
